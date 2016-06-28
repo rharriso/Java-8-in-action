@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FilterBench:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FilterBench_jar</output-path>
+    <root id="archive" name="FilterBench.jar">
+      <element id="module-output" name="FilterBench" />
+    </root>
+  </artifact>
+</component>
