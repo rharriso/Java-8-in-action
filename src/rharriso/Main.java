@@ -12,8 +12,16 @@ public class Main {
     static double appleCount;
 
     public static void main(String[] args) {
-        int pow = Integer.parseInt(args[0]);
-        appleCount = Math.pow(2, pow);
+        try {
+            int pow = Integer.parseInt(args[0]);
+            appleCount = Math.pow(2, pow);
+        } catch(Exception e){
+            System.out.println("Usage: \n");
+            System.out.println("\tfilter [power]");
+            System.out.println("\t\t power - number of items to filter, 2^[power]");
+           return;
+        }
+
         System.out.printf("starting with set size (%d)\n", (int) appleCount);
         testObjects();
         testIntegers();
