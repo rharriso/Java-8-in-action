@@ -2,11 +2,9 @@ package rharriso;
 
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
-public class Main {
+public class FilterBench {
 
     private static Random rand = new Random();
     static double appleCount;
