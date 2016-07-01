@@ -20,10 +20,8 @@ public class FilterBench {
            return;
         }
 
-        System.out.printf("starting with set size (%d)\n", (int) appleCount);
         testObjects();
         testIntegers();
-        System.out.printf("finished with set size (%d)\n", (int) appleCount);
     }
 
     static void testIntegers() {
@@ -40,7 +38,7 @@ public class FilterBench {
         long count1 = apples.stream().filter(a -> a > 100).count();
         long elapsed1 = System.nanoTime() - start1;
 
-        System.out.printf("Par-Int: %d \nSer-Int: %d\nDif-Int: %d\n", elapsed0, elapsed1, elapsed0 - elapsed1);
+        System.out.printf("int, %d, %d, %d, %d, %d\n", appleCount, count0, elapsed0, elapsed1, elapsed0 - elapsed1);
     }
 
     static void testObjects(){
@@ -59,7 +57,7 @@ public class FilterBench {
         long count1 = apples.stream().filter(a -> a.getWeight() > 100).count();
         long elapsed1 = System.nanoTime() - start1;
 
-        System.out.printf("Par-Obj %d \nSer-Obj %d\nDif-Obj %d\n", elapsed0, elapsed1, elapsed0 - elapsed1);
+        System.out.printf("obj, %d, %d, %d, %d, %d\n", appleCount, count0, elapsed0, elapsed1, elapsed0 - elapsed1);
     }
 }
 
